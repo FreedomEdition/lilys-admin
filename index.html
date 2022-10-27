@@ -55,7 +55,7 @@
             #popup {
             text-align: center;
             display: none;
-            height: 70%;
+            height: 520px;
             width: 100%;
             background-color: white;
             z-index: 1000;
@@ -198,6 +198,7 @@
                         var row9 = document.createElement("tr");
                         var row10 = document.createElement("tr");
                         var row11 = document.createElement("tr");
+                        var row12 = document.createElement("tr");
 
                         //Adding columns per row (1 column per row here)...
                         var productimgCol = document.createElement("td");
@@ -212,6 +213,7 @@
                         var col9 = document.createElement("td");
                         var col10 = document.createElement("td");
                         var col11 = document.createElement("td");
+                        var col12 = document.createElement("td");
 
 
 
@@ -227,6 +229,7 @@
                         col9.style.border = 'none';
                         col10.style.border = 'block';
                         col11.style.border = 'none';
+                        col12.style.border = 'none';
 
 
 
@@ -258,6 +261,7 @@
 
                         col11.innerHTML = "<span style='font-weight:bold'>Total Items Bought: </span>" + item_snapshot.child("NumberItemsBought").val();
 
+                        col12.innerHTML = "<span style='font-weight:bold'>Client ID: </span>" + item_snapshot.child("ID").val();
 
 
                         
@@ -276,6 +280,7 @@
                         row9.appendChild(col9);
                         row10.appendChild(col10);
                         row11.appendChild(col11);
+                        row12.appendChild(col12);
                         
                         receiptRow.appendChild(receiptCol);
                         receiptRow.onclick = function(){
@@ -300,11 +305,12 @@
                         tableBody.appendChild(row9);
                         tableBody.appendChild(receiptRow);
                         tableBody.appendChild(row10);
+                        tableBody.appendChild(row12);
                         
 
                     });
                 });
-                 //End extracting and rendering of data here....
+                //End extracting and rendering of data here....
 
 
 
